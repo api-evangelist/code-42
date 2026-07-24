@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/code42/incydr_python/releases
+scheme: semver
+subject: Incydr Python SDK (incydr)
+current_version: 2.12.2
+note: >-
+  Code42 does not publish a single dated REST API changelog on its developer
+  portal; the Incydr SDK release notes are the closest dated changelog for the
+  API surface. Recent window only.
+entries:
+- version: 2.12.2
+  date: '2026-06-22'
+  breaking: false
+  highlights:
+  - Added actorName and ruleName fields on Session response objects.
+- version: 2.12.1
+  date: '2026-06-05'
+  breaking: false
+  highlights:
+  - Fixed alert-rule fetch failure when third-party messaging was configured.
+  - Added Python 3.14 support; dropped Python 3.9.
+- version: 2.12.0
+  date: '2026-05-04'
+  breaking: false
+  highlights:
+  - Added file-event grouping search.
+  - Added session filtering by type (STANDARD or ACCOUNT_TAKE_OVER).
+  - Added browser destination domain trust specifications.
+  - Added a risk-indicator-categories client.
+- version: 2.11.0
+  date: '2026-02-10'
+  breaking: false
+  highlights:
+  - Added agent filtering by serial number, operating system, and connection status.
+- version: 2.9.0
+  date: '2026-01-22'
+  breaking: false
+  highlights:
+  - Added list-agents command for users.
+  - Deprecated the list-devices command and related SDK method.
+- version: 2.8.1
+  date: '2026-01-21'
+  breaking: false
+  highlights:
+  - Added an authorization type for internal development and testing (no user-facing changes).

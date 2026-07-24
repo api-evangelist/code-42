@@ -1,0 +1,39 @@
+# Code 42
+
+> Code42 (now part of Mimecast) is a security software company whose Incydr product is a SaaS Insider Risk Management (IRM) platform that detects and responds to data exfiltration and insider threats across endpoints, cloud, email, and browsers. Code42 exposes a public OAuth 2.0 REST API through regional API gateways, plus an official Python SDK and CLI.
+
+## APIs
+
+- [Code42 Incydr API](https://developer.code42.com/api/): REST API for actors, agents, alert rules, audit log, cases, file events, sessions, users, and watchlists. Base URL https://api.us.code42.com (region-specific). OAuth 2.0 bearer-token auth.
+
+## Docs
+
+- [Developer Portal](https://developer.code42.com/): API documentation, SDK, and CLI resources.
+- [API Reference](https://developer.code42.com/api/): REST API endpoint reference.
+- [SDK Introduction](https://developer.code42.com/sdk/): Incydr Python SDK guide.
+- [CLI Introduction](https://developer.code42.com/cli/): Incydr command-line interface guide.
+- [Status Page](https://status.code42.com/): Regional service status.
+
+## SDKs and Tools
+
+- [incydr (Python SDK)](https://pypi.org/project/incydr/): Official Incydr Python SDK — `pip install incydr`.
+- [incydr CLI](https://developer.code42.com/cli/): Official CLI — `pip install 'incydr[cli]'`.
+- [py42 (legacy Python SDK)](https://pypi.org/project/py42/): Deprecated, EOS 2026-01-01.
+- [code42cli (legacy CLI)](https://pypi.org/project/code42cli/): Deprecated.
+- [GitHub organization](https://github.com/code42): Source repositories.
+
+## Authentication
+
+- OAuth 2.0 client-credentials. Create an API client in the Code42 console, then POST client ID + secret to `https://api.us.code42.com/v1/oauth` to receive a bearer token (expires in 900 seconds). Send `Authorization: Bearer <token>` on every request.
+
+## Repository artifacts
+
+- packages/code-42-packages.yml — SDK/package catalog
+- cli/code-42-cli.yml — CLI command surface
+- authentication/code-42-authentication.yml — auth profile
+- conventions/code-42-conventions.yml — API conventions
+- lifecycle/code-42-lifecycle.yml — versioning, deprecation, status
+- changelog/code-42-changelog.yml — recent release notes
+- conformance/code-42-conformance.yml — standards conformance
+- data-model/code-42-data-model.yml — entity map
+- security/code-42-domain-security.yml — TLS/DNS posture

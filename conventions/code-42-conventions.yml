@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/ + Code42 API syntax/usage docs
+authentication:
+  style: oauth2-client-credentials
+  header: 'Authorization: Bearer <access_token>'
+  token_lifetime_seconds: 900
+  ref: authentication/code-42-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://api.us.code42.com/v1/...
+base_url:
+  pattern: https://api.<region>.code42.com
+  regions:
+  - us
+  - us2
+  - us7
+  - gov
+  - au
+  - ca
+  - de
+  - ie
+  - sg
+  - uk
+  - za
+  note: >-
+    Each tenant is issued a region-specific API gateway base URL when the API
+    client is created; api.us.code42.com is the primary US gateway.
+media_type: application/json
+idempotency:
+  supported: unknown
+  note: >-
+    No idempotency-key contract is documented in the public Code42 developer
+    surface; no Idempotency pointer is emitted.
+error_envelope:
+  note: >-
+    Standard HTTP status codes are returned; a machine-readable problem-details
+    error registry is not published on the public developer surface, so no
+    errors/ artifact is derived.
+rate_limiting:
+  note: >-
+    Rate-limit signaling is not documented on the public developer surface.
+cross_links:
+  authentication: authentication/code-42-authentication.yml
+  lifecycle: lifecycle/code-42-lifecycle.yml
+  data_model: data-model/code-42-data-model.yml

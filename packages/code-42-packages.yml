@@ -1,0 +1,48 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/ + PyPI
+packages:
+- language: python
+  registry: pypi
+  name: incydr
+  version: 2.12.2
+  url: https://pypi.org/project/incydr/
+  repository: https://github.com/code42/incydr_python
+  install: pip install incydr
+  license: MIT
+  official: true
+  description: >-
+    Code42's Incydr Python SDK — a Python client for the Code42 Incydr API,
+    a thin wrapper around Requests with Pydantic-modeled data. The current,
+    recommended SDK. Install the CLI extension with pip install 'incydr[cli]'.
+- language: python
+  registry: pypi
+  name: code42cli
+  version: 1.19.0
+  url: https://pypi.org/project/code42cli/
+  repository: https://github.com/code42/code42cli
+  install: pip install code42cli
+  official: true
+  deprecated: true
+  description: >-
+    The official (legacy) Code42 command-line tool, built on py42. Superseded
+    by the incydr CLI (incydr[cli]).
+- language: python
+  registry: pypi
+  name: py42
+  version: 1.29.1
+  url: https://pypi.org/project/py42/
+  repository: https://github.com/code42/py42
+  install: pip install py42
+  license: MIT
+  official: true
+  deprecated: true
+  deprecation_note: >-
+    py42 is deprecated; end of support 2026-01-01. Use the Incydr SDK instead.
+  description: >-
+    The official (legacy) Code42 Python API client — a wrapper around the
+    Code42 REST APIs handling session/auth management, paging, and JSON parsing.
+notes: >-
+  An archived first-party Ruby repo (github.com/code42/code42_api_ruby, for the
+  legacy CrashPlan API) exists but is not published to a package registry as a
+  clearly first-party gem, so it is omitted here to avoid mis-attribution.

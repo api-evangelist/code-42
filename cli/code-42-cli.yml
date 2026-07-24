@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/cli/
+cli:
+  name: incydr
+  binary: incydr
+  description: >-
+    The Incydr CLI — a command-line tool for interacting with the Code42 Incydr
+    API, built with Click on top of the Incydr SDK Python client. Corresponds
+    command groups to API resources.
+  docs: https://developer.code42.com/cli/
+  getting_started: https://developer.code42.com/cli/getting_started/
+  repository: https://github.com/code42/incydr_python
+  install:
+  - method: pip
+    command: pip install 'incydr[cli]'
+  command_groups:
+  - actors
+  - agents
+  - alert-rules
+  - audit-log
+  - cases
+  - departments
+  - directory-groups
+  - file-events
+  - sessions
+  - trusted-activities
+  - users
+  - watchlists
+  deprecated_command_groups:
+  - alerts
+  - devices
+  - risk-profiles
+legacy_cli:
+  name: code42
+  binary: code42
+  package: code42cli
+  docs: https://clidocs.code42.com/
+  repository: https://github.com/code42/code42cli
+  deprecated: true
+  note: >-
+    Legacy CLI built on py42; superseded by the incydr CLI.

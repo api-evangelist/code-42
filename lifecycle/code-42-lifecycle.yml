@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/ + status.code42.com + SDK release notes
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://developer.code42.com/api/
+deprecation:
+  policy_url: https://developer.code42.com/api/
+  sunset_header: unknown
+  deprecated_api_groups:
+  - Alerts
+  - Devices
+  - Risk Profiles
+  deprecated_sdks:
+  - name: py42
+    end_of_support: '2026-01-01'
+    replacement: incydr (Incydr SDK)
+  notes: >-
+    The Code42 API reference marks the Alerts, Devices, and Risk Profiles
+    endpoint groups as deprecated. The legacy py42 SDK is deprecated with end of
+    support 2026-01-01; the list-devices SDK/CLI surface was deprecated in favor
+    of list-agents (Incydr SDK v2.9.0).
+status_page: https://status.code42.com/
+status_page_provider: Atlassian Statuspage
+status_components:
+  regions:
+  - console.us.code42.com
+  - console.us2.code42.com
+  - console.us7.code42.com
+  - console.gov.code42.com
+  - Australia
+  - Canada
+  - Germany
+  - Ireland
+  - Singapore
+  - United Kingdom
+  - South Africa
+sla:
+  url: null
+  note: SLA/uptime target not published on the public developer surface.

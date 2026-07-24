@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/ + Code42 API clients docs
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    API clients issue OAuth 2.0-compliant bearer tokens via the
+    client-credentials flow (POST /v1/oauth).
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: Client ID + secret exchanged for a short-lived bearer token.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error registry documented publicly.
+- id: openid-connect
+  conforms: false
+- id: rest-json
+  conforms: true
+  evidence: JSON REST API over HTTPS with uri-path versioning (/v1).
+note: >-
+  Derived/searched from the public developer surface. Code42 markets enterprise
+  security compliance (e.g. SOC 2, FedRAMP for the gov environment) but a
+  public, machine-verifiable compliance/trust page could not be confirmed during
+  this pass, so no Compliance pointer is emitted (no fabrication).

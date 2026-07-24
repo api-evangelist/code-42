@@ -1,7 +1,29 @@
 aid: code-42
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/code-42.png
 name: Code 42
-description: 'Code 42 is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: security. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Code42 (now part of Mimecast) is a security software company whose Incydr
+  product is a SaaS Insider Risk Management (IRM) platform that detects, and
+  responds to data exfiltration and insider threats across endpoints, cloud,
+  email, and browsers. Code42 exposes a public OAuth 2.0 REST API through its
+  regional API gateways (api.us.code42.com and other regions) covering actors,
+  agents, alert rules, audit log, cases, file events, sessions, users, and
+  watchlists. Developers integrate via the official Incydr Python SDK, the
+  incydr command-line interface, and the legacy py42 SDK. This profile was added
+  to the API Evangelist network as a portfolio-company lead (backed by Accel)
+  and has been enriched from Code42's public developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/code-42/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,16 +33,86 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Security
-apis: []
+- Insider Risk Management
+- Data Loss Prevention
+- Data Security
+- Endpoint Security
+- Cybersecurity
+- SaaS
+apis:
+- name: Code42 Incydr API
+  description: >-
+    Code42 Incydr's public REST API for insider risk management — actors,
+    agents, alert rules, audit log, cases, departments, directory groups, file
+    events, sessions, trusted activities, users, and watchlists. OAuth 2.0
+    bearer-token authentication via API clients.
+  humanURL: https://developer.code42.com/api/
+  baseURL: https://api.us.code42.com
+  tags:
+  - Insider Risk Management
+  - Security
+  - File Events
+  properties:
+  - type: Authentication
+    url: authentication/code-42-authentication.yml
+  - type: Conventions
+    url: conventions/code-42-conventions.yml
+  - type: DataModel
+    url: data-model/code-42-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/code-42-domain-security.yml
 - type: Website
-  url: http://www.code42.com
+  url: https://www.code42.com
+- type: DeveloperPortal
+  url: https://developer.code42.com/
+- type: Documentation
+  url: https://developer.code42.com/
+- type: APIReference
+  url: https://developer.code42.com/api/
+- type: GettingStarted
+  url: https://developer.code42.com/sdk/
+- type: GitHubOrganization
+  url: https://github.com/code42
+- type: Blog
+  url: https://www.code42.com/blog/
+- type: Login
+  url: https://console.us.code42.com/
+- type: StatusPage
+  url: https://status.code42.com/
+- type: Deprecation
+  url: lifecycle/code-42-lifecycle.yml
+- type: Packages
+  url: packages/code-42-packages.yml
+- type: SDKs
+  url: packages/code-42-packages.yml
+- type: CLI
+  url: cli/code-42-cli.yml
+- type: Authentication
+  url: authentication/code-42-authentication.yml
+- type: Conventions
+  url: conventions/code-42-conventions.yml
+- type: Lifecycle
+  url: lifecycle/code-42-lifecycle.yml
+- type: ChangeLog
+  url: changelog/code-42-changelog.yml
+- type: Conformance
+  url: conformance/code-42-conformance.yml
+- type: DataModel
+  url: data-model/code-42-data-model.yml
+- type: LLMsTxt
+  url: llms/code-42-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

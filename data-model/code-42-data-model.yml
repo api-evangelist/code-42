@@ -1,0 +1,68 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.code42.com/api/ (API reference resource groups)
+note: >-
+  High-level entity map derived from the documented Code42 Incydr API reference
+  resource groups. No OpenAPI specification is published on the public developer
+  surface, so field-level relationships are not machine-derived; entities below
+  reflect the documented API resource groups.
+entities:
+- name: Actor
+  description: A person (identity) whose activity is monitored for insider risk.
+- name: Agent
+  description: Code42 endpoint agent installed on a monitored device.
+- name: AlertRule
+  description: Rule that generates alerts on risky file activity.
+- name: AuditLog
+  description: Record of administrative and system events.
+- name: Case
+  description: Investigation case grouping related risk events and evidence.
+- name: Customer
+  description: Tenant/customer account metadata.
+- name: Department
+  description: Organizational department grouping of users.
+- name: DirectoryGroup
+  description: Group synced from an identity directory.
+- name: FileEvent
+  description: File exfiltration/movement event (the core risk telemetry).
+- name: File
+  description: File metadata associated with file events.
+- name: LegalHold
+  description: Legal hold membership and matters.
+- name: Organization
+  description: Organization/org-unit within a tenant.
+- name: RiskIndicatorCategory
+  description: Category of risk indicators applied to file events.
+- name: Session
+  description: Grouped risk session (e.g. STANDARD or ACCOUNT_TAKE_OVER).
+- name: TrustedActivity
+  description: Allowlisted destinations/domains trusted for a tenant.
+- name: User
+  description: Console user identity.
+- name: Watchlist
+  description: List of actors under heightened monitoring.
+deprecated_entities:
+- name: Alert
+- name: Device
+- name: RiskProfile
+relationships:
+- from: Actor
+  to: Watchlist
+  type: has_many
+  note: An actor may be a member of multiple watchlists.
+- from: FileEvent
+  to: RiskIndicatorCategory
+  type: has_many
+  note: A file event carries one or more risk indicators.
+- from: Session
+  to: FileEvent
+  type: has_many
+  note: A session groups related file events.
+- from: Case
+  to: FileEvent
+  type: has_many
+  note: A case collects file events as evidence.
+- from: AlertRule
+  to: Watchlist
+  type: references
+  note: Alert rules can scope to watchlists.
